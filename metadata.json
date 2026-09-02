@@ -1,0 +1,6 @@
+{
+  "name": "Nightbird: Tag Database",
+  "description": "Forensic intelligence archive and entity tag database for investigative analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

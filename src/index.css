@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-headline: "Chivo", sans-serif;
+    --font-meta: "JetBrains Mono", monospace;
+    --font-body: "Hanken Grotesk", sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #0F0E0D;
+    color: #e9e1db;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline);
+  }
+
+  code, pre, .font-mono, .meta-code {
+    font-family: var(--font-meta);
+  }
+}
+
+.texture-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  z-index: 10;
+}
+
+.data-stream-bg {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.015) 2px,
+    rgba(255, 255, 255, 0.015) 4px
+  );
+}
+
+/* Custom Scrollbar for Terminal aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F0E0D;
+  border-left: 1px solid #514536;
+}
+::-webkit-scrollbar-thumb {
+  background: #383430;
+  border: 1px solid #514536;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9e8e7d;
+}
+
+.tag-row {
+  transition: all 0.15s ease-in-out;
+}
+.tag-row:hover {
+  border-left: 3px solid #FFB84D;
+  background-color: #1e1b18;
+}
+
